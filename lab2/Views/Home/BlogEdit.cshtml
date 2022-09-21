@@ -1,0 +1,36 @@
+@{
+    ViewData["Title"] = "Edit Blog";
+}
+<h1>Edit Blog</h1>
+
+<form>
+
+  <div class="form-group">
+    <label for="input1">OWNER ID</label>
+    <input type="text" class="form-control" id="input1" placeholder="@ViewBag.editOwnerId" disabled>
+  </div>
+
+  <div class="form-group">
+    <label for="input1">BLOG ID</label>
+    <input type="text" class="form-control" id="input1" value="@ViewBag.editBlogId" disabled>
+  </div>
+
+  <div class="form-group">
+    <label for="input1">TITLE</label>
+    <input type="text" class="form-control" id="input1" name="edit_title" value="@ViewBag.editTitle">
+  </div>
+
+  <div class="form-group">
+    <label for="input1">CONTENT</label>
+    <textarea class="form-control" id="input1" rows="6" name="edit_content">@ViewBag.editContent</textarea>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col d-flex justify-content-center">
+    </div>
+  </div>
+
+  <!-- value contains both user id and blog id. It will be divided at backend.-->
+  <button formaction="BlogEditList" name="ownerid2", value="@ViewBag.user,@ViewBag.editBlogId" class="btn btn-primary btn-block mb-4">Edit Blog</button>
+  
+</form>

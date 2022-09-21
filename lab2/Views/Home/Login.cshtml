@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Log In";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form action="LoginBlogMain" method="GET">
+
+  <div class="form-outline mb-4">
+    <input type="text" name="loginuser" id="useridLogin" class="form-control" />
+    <label class="form-label" for="useridLogin2">User Id</label>
+  </div>
+
+  <div class="form-outline mb-4">
+    <input type="password" name="loginpassword" id="passwordLogin" class="form-control" />
+    <label class="form-label" for="passwordLogin2">Password</label>
+  </div>
+
+  <!-- Layout -->
+  <div class="row mb-4">
+    <div class="col d-flex justify-content-center">
+    </div>
+  </div>
+
+  <input type="submit" name="buttontype" value="Login" class="btn btn-primary btn-block mb-4" />
+</form>

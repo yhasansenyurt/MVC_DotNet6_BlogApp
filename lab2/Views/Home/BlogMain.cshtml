@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Main Page";
+}
+<h1>Welcome @ViewBag.UserId</h1>
+
+<h2>Blogs</h2>
+
+<form method="GET">
+    
+    <div class="form-group">
+    <label for="input1">Select Blog</label>
+      <select class="form-control" name="blogselect" id="mySelect" size="15">
+        <!-- lists blogs which came from backend as array. -->
+      @foreach (string blog in ViewBag.Blogs) {
+        <option>@blog</option>
+        }
+  </select>
+  </div>
+
+    <div class="row mb-4">
+      <div class="col d-flex justify-content-center">
+      </div>
+    </div>
+  
+    <div class="space">
+    </div>
+
+    <button formaction="BlogView" class="btn btn-primary btn-block mb-4">View Blog</button>
+
+    <button formaction="BlogAdd" name="userid" value="@ViewBag.UserId" class="btn btn-primary btn-block mb-4 ms-4">Add Blog</button>
+
+    <button formaction="BlogEdit" name="userid2" value="@ViewBag.UserId" class="btn btn-primary btn-block mb-4 ms-4">Edit Blog</button>
+
+    <!-- ViewBag.RemoveButton contains information which will decide whether button should be disabled or enabled according to number of blogs. -->
+    <button formaction="BlogRemove" name="userid3" value="@ViewBag.UserId" class="btn btn-primary btn-block mb-4 ms-4" @ViewBag.RemoveButton >Remove Blog</button>
+    
+</form>
+
+
+
+
+
+

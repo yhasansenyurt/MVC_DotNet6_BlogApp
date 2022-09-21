@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Registration";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<form action="RegisterBlogMain" method="GET">
+
+  <div class="form-outline mb-4">
+    <input type="text" name="registeruser"  id="useridRegister" class="form-control" />
+    <label class="form-label" for="useridRegister2">User Id</label>
+  </div>
+
+  <div class="form-outline mb-4">
+    <input type="text" name="registeremail" id="emailRegister" class="form-control" />
+    <label class="form-label" for="emailRegister2">Email</label>
+  </div>
+
+  <div class="form-outline mb-4">
+    <input type="password" name="registerpassword" id="passwordRegister" class="form-control" />
+    <label class="form-label" for="passwordRegister2">Password</label>
+  </div>
+
+  <!-- Layout -->
+  <div class="row mb-4">
+    <div class="col d-flex justify-content-center">
+    </div>
+  </div>
+
+  <input type="submit" name="buttontype" value="Register" class="btn btn-primary btn-block mb-4" />
+</form>

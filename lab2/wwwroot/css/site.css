@@ -1,0 +1,26 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-image: url("/content/images/blog.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+input,textarea, select {
+  opacity: 0.9;
+}
